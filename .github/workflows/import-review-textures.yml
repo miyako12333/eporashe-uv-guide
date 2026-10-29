@@ -1,0 +1,26 @@
+name: Import original review cream texture
+on:
+  push:
+    paths: ['.github/workflows/import-review-textures.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download actual peach cream texture
+        run: |
+          curl --fail --location --retry 3 'https://d2ol7oe51mr4n9.cloudfront.net/user_32a7XXQFux0gfG2cgMkQgLQk5JP/2e33ee84-23eb-41c0-9f54-9111dffe0d3b.png' --output assets/review-cream-peach-original.png
+          file assets/review-cream-peach-original.png
+          test "$(stat -c %s assets/review-cream-peach-original.png)" -gt 200000
+      - name: Commit original texture
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/review-cream-peach-original.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Import exact generated peach cream texture"
+            git push
+          fi
