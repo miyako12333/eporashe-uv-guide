@@ -1,0 +1,30 @@
+name: Render Silasoma PNG
+on:
+  push:
+    paths:
+      - '.github/workflows/render-silasoma.yml'
+      - 'assets/silasoma_uv_explained_20261029.svg'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render SVG to high resolution PNG
+        run: |
+          python -m pip install --quiet cairosvg
+          python - <<'PY'
+          import cairosvg
+          cairosvg.svg2png(url='assets/silasoma_uv_explained_20261029.svg',write_to='assets/silasoma_uv_explained_20261029.png',output_width=1840,output_height=1300)
+          PY
+      - name: Commit generated PNG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/silasoma_uv_explained_20261029.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Render approved Silasoma diagram as PNG"
+            git push
+          fi
