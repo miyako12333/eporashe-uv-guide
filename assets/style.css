@@ -15,3 +15,37 @@
 .product-info h3,.product-info>p{min-height:0}
 @media(max-width:900px){.product-img,.product-img.tint{height:300px}.section{padding-top:40px;padding-bottom:40px}}
 @media(max-width:550px){.product-img,.product-img.tint{height:225px;padding:26px 8px 8px}.section{padding-top:34px;padding-bottom:34px}}
+
+/* Editorial redesign 2026-10-29 */
+.hero{min-height:620px;grid-template-columns:45% 55%;isolation:isolate}
+.hero-bg{object-position:center}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,253,247,.87),rgba(255,253,247,.25) 63%,transparent);pointer-events:none}
+.hero-content{z-index:3;padding:8% 2% 8% 9%}
+.hero h1{font-size:clamp(50px,6.3vw,92px);line-height:1.28}
+.hero-note{font-size:13px;color:#586859;line-height:2}
+.hero-stage{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:10% 4% 9%;min-width:0}
+.hero-stage:before{content:"";position:absolute;bottom:18%;left:10%;right:6%;height:22%;border-radius:50%;background:rgba(138,112,76,.13);filter:blur(28px)}
+.hero-stage .hero-products{display:flex;align-items:end;justify-content:center;gap:0;padding:0;min-height:0;width:100%}
+.hero-stage .hero-products img,.hero-stage .hero-products img:nth-child(1),.hero-stage .hero-products img:nth-child(2),.hero-stage .hero-products img:last-child{flex:0 0 25%;width:25%;height:clamp(210px,28vw,390px);max-width:25%;object-fit:contain;filter:drop-shadow(6px 12px 9px rgba(68,58,41,.15))}
+.hero-stage .hero-products img:nth-child(2){height:clamp(240px,32vw,450px)}
+.stage-label{text-align:center;letter-spacing:.3em;font:11px Georgia,serif;color:#657664;margin:18px 0 0}
+.product-img img{object-fit:contain;mix-blend-mode:normal}
+.capsule-explainer{text-align:center;padding:18px 4px}
+.capsule-orbit{position:relative;width:min(290px,75%);aspect-ratio:1;margin:0 auto 23px;border-radius:50%;background:radial-gradient(circle at 34% 28%,#fff,#e4efe9 58%,#aac9c1);box-shadow:inset 0 0 0 9px #ffffff88,0 15px 35px #8ca49a44;display:grid;place-items:center}
+.capsule-orbit:before,.capsule-orbit:after{content:"";position:absolute;border:1px solid #fff9;border-radius:50%;inset:19px}
+.capsule-orbit:after{inset:33px;border-style:dashed;border-color:#789c9399}
+.capsule-core{position:relative;width:65%;height:65%;border-radius:50%;background:radial-gradient(circle at 35% 25%,#ffffffdd,#d9e5dd88 75%);box-shadow:inset 0 0 19px #fff}
+.capsule-core i{position:absolute;border-radius:50%;width:26%;aspect-ratio:1;background:radial-gradient(circle at 30% 25%,white,#e9bc7c);box-shadow:0 4px 10px #4b57422b}
+.capsule-core .core-one{top:12%;left:22%}.capsule-core .core-two{top:43%;left:50%;background:radial-gradient(circle at 30% 25%,white,#b8d5cb)}.capsule-core .core-three{top:62%;left:19%;background:radial-gradient(circle at 30% 25%,white,#b7d5e2)}.capsule-core .core-four{top:16%;left:65%;background:radial-gradient(circle at 30% 25%,white,#b8d5cb)}.capsule-core .core-five{top:60%;left:67%}.capsule-core .core-six{top:38%;left:8%;background:radial-gradient(circle at 30% 25%,white,#b7d5e2)}
+.capsule-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;font-size:12px}.capsule-legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{height:12px;width:12px;border-radius:50%;display:inline-block}.dot.gold{background:#e9bc7c}.dot.green{background:#b8d5cb}.dot.blue{background:#b7d5e2}
+.capsule-caption{font:11px Georgia;color:#8ca296;letter-spacing:.22em;margin:20px 0 0}
+.ritual-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ritual-card{background:#fff;border:1px solid #e8e7e0;overflow:hidden}
+.ritual-photo{height:210px;background:linear-gradient(135deg,#faf7f0,#e4ebe5);overflow:hidden}
+.ritual-photo img{height:100%;width:100%;object-fit:cover}
+.ritual-uv,.ritual-finish{display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,#fff,#e7e9df)}
+.ritual-uv img,.ritual-finish img{width:100%;height:100%;object-fit:contain;padding:10px}
+.ritual-copy{padding:19px 17px}.ritual-copy b{font-size:10px;letter-spacing:.18em;color:#86977e}.ritual-copy h3{font-family:serif;font-size:20px;margin:12px 0 8px}.ritual-copy p{font-size:13px;line-height:1.7;margin:0}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-content{padding:48px 8% 8px}.hero-stage{padding:0 7% 30px}.hero-stage .hero-products img,.hero-stage .hero-products img:nth-child(1),.hero-stage .hero-products img:nth-child(2),.hero-stage .hero-products img:last-child{height:260px}.hero-stage .hero-products img:nth-child(2){height:290px}.ritual-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:550px){.hero{min-height:0}.hero-content{padding:35px 7% 12px}.hero h1{font-size:clamp(49px,11vw,68px)}.hero-stage{padding:0 3% 28px}.hero-stage .hero-products img,.hero-stage .hero-products img:nth-child(1),.hero-stage .hero-products img:nth-child(2),.hero-stage .hero-products img:last-child{height:160px}.hero-stage .hero-products img:nth-child(2){height:180px}.ritual-grid{gap:9px}.ritual-photo{height:155px}.ritual-copy{padding:12px}.ritual-copy h3{font-size:16px}.ritual-copy p{font-size:12px}}
