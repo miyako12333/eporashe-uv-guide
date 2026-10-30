@@ -60,3 +60,16 @@
  .ribbon{padding:12px 14px!important;gap:7px!important;font-size:10px!important;line-height:1.6!important}
 }
 @media(max-width:375px){.hero-mobile-products>div{height:140px}.hero-mobile-products>div:nth-child(2),.hero-mobile-products>div:nth-child(4){height:157px}.hero-composite .hero-content{padding-left:18px!important;padding-right:18px!important}}
+
+/* Mobile hero gallery v3: larger 2×2 editorial product composition; PC untouched */
+@media(max-width:600px){
+ .hero-composite .hero-content{padding-bottom:18px!important}
+ .hero-mobile-products{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important;margin:2px 14px 16px!important;padding:12px!important;background:linear-gradient(145deg,#f7f7f0,#ecf1e9)!important;border-radius:18px!important}
+ .hero-mobile-products>div,.hero-mobile-products>div:nth-child(2),.hero-mobile-products>div:nth-child(4){position:relative!important;min-width:0!important;height:194px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;border-radius:12px!important;padding:4px 4px 24px!important;background:radial-gradient(circle at 65% 35%,#fffefb 0%,#f5f5ed 65%,#edf1e9 100%)!important}
+ .hero-mobile-products>div:nth-child(3){background:radial-gradient(circle at 55% 35%,#fffaf2,#f5eadd)!important}
+ .hero-mobile-products>div:nth-child(4){background:radial-gradient(circle at 55% 35%,#fff8f5,#f5e8e6)!important}
+ .hero-mobile-products img{width:100%!important;height:166px!important;object-fit:contain!important;object-position:center!important;transform:scale(1.85)!important;filter:drop-shadow(1px 7px 5px rgba(72,59,49,.13))!important}
+ .hero-mobile-products>div:nth-child(3) img,.hero-mobile-products>div:nth-child(4) img{transform:scale(2.15)!important}
+ .hero-mobile-products span{position:absolute!important;bottom:7px!important;left:0!important;right:0!important;display:block!important;text-align:center!important;font-size:10px!important;letter-spacing:.025em!important;color:#526958!important;font-weight:600!important;line-height:1.35!important}
+}
+@media(max-width:375px){.hero-mobile-products>div,.hero-mobile-products>div:nth-child(2),.hero-mobile-products>div:nth-child(4){height:174px!important}.hero-mobile-products img{height:146px!important}}
