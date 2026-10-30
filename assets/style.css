@@ -96,3 +96,6 @@
  .hero.hero-composite>.hero-content{order:1!important}
  .hero.hero-composite>.hero-mobile-photo{display:block!important;position:relative!important;order:2!important;flex:none!important;width:100%!important;height:clamp(270px,68vw,410px)!important;min-height:270px!important;background-image:url("hero_approved_visual.webp")!important;background-size:cover!important;background-repeat:no-repeat!important;background-position:65% center!important;background-color:#f0ede3!important}
 }
+
+/* Hero fix 6: visible actual IMG rather than relying on CSS background, cache-busted */
+@media(max-width:600px){.hero.hero-composite>.hero-mobile-photo{display:block!important;width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:1.45!important;background:#f5f0e6!important;overflow:hidden!important}.hero.hero-composite>.hero-mobile-photo>img{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:100%!important;aspect-ratio:1.45!important;object-fit:cover!important;object-position:65% center!important;max-width:none!important;position:relative!important;z-index:3!important}}
